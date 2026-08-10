@@ -41,13 +41,13 @@ TwoWire &busOut = Wire1;         // I2C peripheral 1
 
 // ---------------------------------------------------------------- config
 const int PWM_FREQ = 20000;   // was 10000
-const int PWM_RES  = 11;      // was 12
+const int PWM_RES  = 12;      // was 11
 
 // DUTY CEILING. Cout is rated 16 V; on the 19 V bench 0.75 duty puts
 // Vout at ~14 V. Do not raise without a higher-voltage output cap.
-const int DUTY_MAX   = 1536;   // was 3072
-const int DUTY_MIN   = 64;     // was 128
-const int DUTY_START = 512;    // was 1024
+const int DUTY_MAX   = 3072;   // was 1536
+const int DUTY_MIN   = 128;     // was 64
+const int DUTY_START = 1024;    // was 528
 
 // Shunts actually fitted to each breakout. Stock modules ship 0.1 ohm,
 // which clips at 0.82 A (81.92 mV / 0.1). 0.02 ohm gives 4.1 A full scale.
@@ -57,12 +57,12 @@ const float R_SHUNT_OUT = 0.02f;
 const int PO_STEP = 8;                     // perturbation size, counts
 const unsigned long PO_INTERVAL  = 100;     // ms between perturbations
 const unsigned long LOG_INTERVAL = 200;     // ms between CSV rows
-const unsigned long WINDOW_MS    = 120000;  // 2 minute averaging window
+const unsigned long WINDOW_MS    = 300000;  // 5 minute averaging window
 const unsigned long SOFTSTART_MS = 5000;    // ramp duty in over 5 s
 
-const int SWEEP_FROM = 128;    // was 256
+const int SWEEP_FROM = 256;    // was 128
 const int SWEEP_TO   = DUTY_MAX;
-const int SWEEP_STEP = 32;
+const int SWEEP_STEP = 64;
 const unsigned long SWEEP_DWELL = 300;
 
 // ------------------------------------------------------- INA226 registers
