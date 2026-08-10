@@ -31,8 +31,8 @@ The converter power stage was designed and built from discrete parts rather than
 | IRF9540 P-channel MOSFET | Buck converter high-side switch |
 | BC337 NPN transistor | Gate drive. Pulls the gate below the panel rail |
 | 2x 3-33V zener, in series | Clamp holding Vgs inside the FET's ±20 V limit |
-| SR560 Schottky diode] | Asynchronous freewheel path |
-| 100 µH inductor, 3A] | Buck inductor |
+| SR560 Schottky diode | Asynchronous freewheel path |
+| 100 µH inductor, 3A | Buck inductor |
 | 1000 µF electrolytic, 16 V rated | Output filter. **The 16 V rating sets the duty ceiling** |
 | 220 µF electrolytic + 100 nF ceramic | Input filter and local decoupling |
 | 100 nF ceramic | Output-side decoupling |
